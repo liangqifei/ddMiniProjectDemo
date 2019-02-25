@@ -1,0 +1,13 @@
+<view class='cavans'>
+ <image  src="{{imageurl}}"  class='image' mode='widthFix'/>
+ <input value={{info}} class='info' maxlength='20'/>
+ <canvas
+  id="canvas"
+  class="canvas"
+  height="400"
+  width="400"
+  style="width:800rpx;height:800rpx;"
+/>
+ <button type="primary" onTap="createmage" class='bottomBtn'>一键生成</button>
+
+</view>

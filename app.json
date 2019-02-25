@@ -1,0 +1,9 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/cavans/cavans"
+  ],
+  "window": {
+    "defaultTitle": "App Demo"
+  }
+}

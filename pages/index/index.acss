@@ -1,0 +1,26 @@
+.home {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.home{
+  padding: 10rpx ;
+}
+.section {
+  display: flex;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  width:40%;
+  margin:20rpx 10rpx;
+  position:relative;
+  flex-wrap: wrap;
+}
+
+.button{
+  color:#333333;
+  width:100%;
+  text-align: center;
+
+}

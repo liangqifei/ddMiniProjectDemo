@@ -1,0 +1,7 @@
+<view class='home'>
+  <view class="section" a:for="{{piclist}}" a:for-item="item" onTap="goCavans" data-imageurl='{{item.imageUrl}}' data-name='{{item.name}}'>
+    <!-- <view class="title">{{item.name}}</view> -->
+    <image  src="{{item.imageUrl}}" onError="imageError" onLoad="imageLoad" class='image'/>
+    <view class='button'>{{item.name}}</view>
+  </view>
+</view>
