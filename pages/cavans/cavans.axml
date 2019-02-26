@@ -4,9 +4,8 @@
  <canvas
   id="canvas"
   class="canvas"
-  height="400"
-  width="400"
-  style="width:800rpx;height:800rpx;"
+
+  style="width:100%;height:900rpx;"
 />
  <button type="primary" onTap="createmage" class='bottomBtn'>一键生成</button>
 

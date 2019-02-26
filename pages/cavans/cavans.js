@@ -6,24 +6,16 @@ Page({
     person: "lqf"
   },
   onLoad(options) {
-    console.log(decodeURIComponent(options.imageurl))
+   
     this.setData({
       name: options.name,
-      imageurl: decodeURIComponent(options.imageurl)
+      imageurl:decodeURIComponent(options.imageurl) ,
+      cavansUrl:"https://sum.kdcer.com/test/sw_shake/0/0 (1).jpg"
     })
   },
 
-  onReady() {
-    this.point = {
-      x: Math.random() * 295,
-      y: Math.random() * 295,
-      dx: Math.random() * 5,
-      dy: Math.random() * 5,
-      r: Math.round(Math.random() * 255 | 0),
-      g: Math.round(Math.random() * 255 | 0),
-		  b: Math.round(Math.random() * 255 | 0),
-    };
-this.draw() 
+  onReady(options) {
+    this.draw() 
     // this.interval = setInterval(() => {this.draw() }, 17);
   },
 
@@ -62,6 +54,8 @@ this.draw()
         ctx.fillStyle ="blue";
         ctx.fillRect(x, y, width, height);        
     }
+    console.log(this.data.imageurl)
+    ctx.drawImage(this.data.cavansUrl,0,300,52.7,93.7);
     ctx.draw();
     // ctx.arc(this.point.x, this.point.y, 10, 0, 2 * Math.PI);
     // ctx.setFillStyle("rgb(" + this.point.r + ", " + this.point.g + ", " + this.point.b + ")");
