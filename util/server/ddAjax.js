@@ -5,6 +5,9 @@ function ddRequest(method = "GET", url, data, onComplete) {
       method: method,
       data: data,
       dataType: 'json',
+      headers: {
+        'Content-Type': 'application/json' // 使用这个能正常获取数据
+      },
       success: function (res) {
         resolve(res.data)
       },
@@ -62,7 +65,7 @@ export function getRequest2(fetachObj) {
       console.log(2)
     }
   }
-  configObj=Object.assign(configObj,fetachObj)
+  configObj = Object.assign(configObj, fetachObj)
   console.log(configObj)
   return ddRequest("GET", configObj.url, configObj.data, configObj.onComplete).
     then(res => {
@@ -111,9 +114,9 @@ export function postRequest2(fetachObj) {
       console.log(2)
     }
   }
-  configObj=Object.assign(configObj,fetachObj)
+  configObj = Object.assign(configObj, fetachObj)
   console.log(configObj)
-  return ddRequest("GET", configObj.url, configObj.data, configObj.onComplete).
+  return ddRequest("POST", configObj.url, configObj.data, configObj.onComplete).
     then(res => {
       if (configObj.onSuccess && typeof configObj.onSuccess == "function") {
         configObj.onSuccess(res)

@@ -1,6 +1,6 @@
 import { Dd_navigateTo } from "../../util/filter.js"
-import {getRequest,getRequest2 } from '../../util/server/ddAjax.js'
-import {activityUrl} from "../../util/server/config.js"
+import {getRequest,getRequest2,postRequest2 } from '../../util/server/ddAjax.js'
+import {activityUrl,authUrl} from "../../util/server/config.js"
 Page({
   data: {
     piclist: [],
@@ -27,7 +27,7 @@ Page({
   getInit(){
     getRequest2({
       url:activityUrl, 
-      data:{ pageNum: 1},
+      data:{},
       onSuccess:(res)=>{
         this.setData({
           piclist:res.data
@@ -37,6 +37,19 @@ Page({
 
       }
     });
+postRequest2({
+      url:authUrl, 
+      data:{ pageNum: 1,list:[{num:1},{num:2}]},
+      onSuccess:(res)=>{
+        this.setData({
+          piclist:res.data
+        })
+      },
+      onComplete:()=>{
+
+      }
+    });
+    
   },
   onShow() {
     // 页面显示
