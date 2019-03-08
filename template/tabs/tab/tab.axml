@@ -1,0 +1,9 @@
+<template name="tabs" >
+   <view class='tabs'>
+     <!-- {{titleList}} -->
+    <view class='tabsItem' a:for='{{titleList}}' onTap="clicka"> 全部</view>
+    <view class='tabsItem active'> 全部</view>
+    <view class='tabsItem'> 全部</view>
+    <view class='tabsItem'> 全部</view>
+    </view>
+</template>

@@ -1,0 +1,6 @@
+   
+<view class='tabs'>
+  <!-- {{titleList}} -->
+  <view class='tabsItem' a:for='{{titleList}}' onTap="onMyClick"> 全部
+  </view>
+</view>

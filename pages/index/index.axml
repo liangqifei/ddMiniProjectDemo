@@ -1,4 +1,12 @@
+<import src="/template/tabs/tab/tab.axml"/>
+
 <view class='home'>
+  <template
+        is="tabs"
+        key="tabs"
+        data="{{titleList:titleList}}"
+/>
+<my-component  extra="external extra" onCounterPlusOne="onCounterPlusOne"/>
   <view class="section" a:for="{{piclist}}" a:for-item="item" onTap="goCavans" data-imageurl='{{item.imageUrl}}' data-name='{{item.name}}'>
     <!-- <view class="title">{{item.name}}</view> -->
     <image  src="{{item.imageUrl}}" onError="imageError" onLoad="imageLoad" class='image'/>

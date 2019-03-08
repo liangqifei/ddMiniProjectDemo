@@ -1,4 +1,7 @@
 {
   "defaultTitle":"模板中心",
-  "titleBarColor": "#ff787e"
+  "titleBarColor": "#ff787e",
+  "usingComponents": {
+    "my-component": "/components/tabs/tabs"
+  }
 }

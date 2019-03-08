@@ -3,12 +3,31 @@ import {getRequest,getRequest2 } from '../../util/server/ddAjax.js'
 import {activityUrl} from "../../util/server/config.js"
 Page({
   data: {
-    piclist: [],
-
+    piclist: [{
+      name:'dlldl'
+    },{
+      name:'dlldl'
+    },{
+      name:'dlldl'
+    }],
+    titleList:[{
+      name:"全部"
+    },{
+      name:"我参与的"
+    },{
+      name:"我负责的"
+    }]
   },
   onLoad(query) {
     // 页面加载
-    this.getInit();
+    // this.getInit();
+  },
+  clicka(){
+    alert("clicka")
+  },
+  onCounterPlusOne(data){
+    console.log(data)
+    dd.alert("onCounterPlusOne")
   },
   goCavans(e) {
     console.log( {
